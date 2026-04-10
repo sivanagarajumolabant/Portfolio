@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M. Siva Naga Raju - Senior Technical Analyst specializing in AI-powered database migration solutions">
+    <meta name="keywords" content="AI Engineer, Database Migration, LangChain, LangGraph, Python, Azure, AWS">
+    <meta name="author" content="M. Siva Naga Raju">
+    <title>M. Siva Naga Raju - Portfolio</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #ecf0f1;
+            --bg-white: #ffffff;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        /* Header */
+        header {
+            background: var(--gradient-1);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--bg-white);
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background: var(--gradient-1);
+            color: white;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            background: var(--bg-white);
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+
+        h4 {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-card {
+            background: var(--gradient-1);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .skill-category strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border-left: 5px solid var(--secondary-color);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-left-color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .project-period {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .project-subtitle {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Agent Cards */
+        .agent-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border: 2px solid var(--bg-light);
+            transition: all 0.3s;
+        }
+
+        .agent-card:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+        }
+
+        /* Lists */
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            line-height: 1.8;
+        }
+
+        li strong {
+            color: var(--accent-color);
+        }
+
+        /* Stack Tags */
+        .stack {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, .btn { display: none; }
+            section { page-break-inside: avoid; }
+            body { background: white; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .container { padding: 1rem; }
+            section { padding: 1.5rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--gradient-1);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>M. SIVA NAGA RAJU</h1>
+            <div class="subtitle">Senior Technical Analyst | AI Solutions Architect | Database Migration Specialist</div>
+            <div class="contact-info">
+                <a href="mailto:siva.m504504@gmail.com" class="contact-item">
+                    ✉️ siva.m504504@gmail.com
+                </a>
+                <span class="contact-item">
+                    📱 +91-8985111673
+                </span>
+                <span class="contact-item">
+                    📍 Hyderabad, India
+                </span>
+                <a href="https://linkedin.com/in/siva-nagaraju-molabanti-b9883a185" target="_blank" class="contact-item">
+                    💼 LinkedIn
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#summary" class="nav-link">Summary</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#education" class="nav-link">Education</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Summary Section -->
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                Senior Technical Analyst with <strong>7+ years of experience</strong> at Quadrant Technologies, specializing in enterprise-grade AI-powered database migration solutions for the <strong>QMigrator</strong> product. Architect of 6 production-grade autonomous agents built on LangGraph and LangChain, deployed across <strong>Fortune 500 clients</strong> including UHG, Elevance Health, eBay, Nike, and Apollo Hospitals.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Automation in Schema Conversion</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">AI-Driven Error Correction Accuracy</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">75%</span>
+                    <span class="stat-label">Time Reduction (2 hrs → 8 mins)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">$2M+</span>
+                    <span class="stat-label">Cost Savings for Clients</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>AI & Generative AI</strong>
+                    LangChain, LangGraph, Multi-Agent Systems, RAG Architecture, Prompt Engineering, Pydantic AI, Agentic AI, NLP, Conversational AI
+                </div>
+                <div class="skill-category">
+                    <strong>Large Language Models</strong>
+                    Azure OpenAI GPT-4, Anthropic Claude, Google Gemini, Groq, Ollama
+                </div>
+                <div class="skill-category">
+                    <strong>Vector Databases</strong>
+                    ChromaDB, FAISS, Pinecone, Milvus, Qdrant
+                </div>
+                <div class="skill-category">
+                    <strong>AI Evaluation</strong>
+                    DeepEval, Ragas, AI Guardrails, AI Safety, Quality Assurance
+                </div>
+                <div class="skill-category">
+                    <strong>Programming Languages</strong>
+                    Python (Expert), SQL (Advanced), JavaScript
+                </div>
+                <div class="skill-category">
+                    <strong>Backend Frameworks</strong>
+                    FastAPI, Django, Django REST Framework, Flask, Streamlit
+                </div>
+                <div class="skill-category">
+                    <strong>Data Engineering</strong>
+                    Pandas, NumPy, Apache Airflow, Celery, ETL Pipelines
+                </div>
+                <div class="skill-category">
+                    <strong>Databases</strong>
+                    PostgreSQL, Oracle, SQL Server, MySQL, MongoDB, Redis
+                </div>
+                <div class="skill-category">
+                    <strong>Data Platforms</strong>
+                    Snowflake, Databricks, Delta Lake
+                </div>
+                <div class="skill-category">
+                    <strong>Cloud - Azure</strong>
+                    AKS, ACR, Azure DevOps, Key Vault, Pipelines, Azure PostgreSQL
+                </div>
+                <div class="skill-category">
+                    <strong>Cloud - AWS</strong>
+                    ECS, Fargate, ECR, API Gateway, Lambda, S3, EC2, RDS
+                </div>
+                <div class="skill-category">
+                    <strong>DevOps & Containers</strong>
+                    Docker, Kubernetes, Helm Charts, GitHub Actions, GitLab CI/CD
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="project-card" style="background: var(--gradient-1); color: white; border: none;">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title" style="color: white; font-size: 1.4rem;">Quadrant Technologies</div>
+                        <div style="opacity: 0.9; margin-top: 0.5rem;">Senior Technical Analyst</div>
+                    </div>
+                    <div class="project-period" style="color: white; font-weight: 600;">March 2019 - Present (7+ Years)</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Product: QMigrator — Enterprise Database Migration Platform</h3>
+            <p><strong>Core Product Developer and AI Solutions Architect</strong> | 2019 - Present</p>
+            <p>Platform URL: <a href="https://qcam.qmigrator.ai/" target="_blank" style="color: var(--secondary-color);">qcam.qmigrator.ai</a></p>
+            <p style="margin: 1rem 0;">
+                QMigrator is Quadrant Technologies' flagship enterprise database migration platform that automates end-to-end schema conversion, data migration, and code translation across heterogeneous database environments.
+            </p>
+            <ul>
+                <li>Built and maintained the core migration platform serving <strong>15+ enterprise clients</strong> over 7 years</li>
+                <li>Evolved the product from manual feature-based conversion (2019) to fully <strong>autonomous AI-driven migration</strong> (2025)</li>
+                <li>Processed <strong>100,000+ database objects</strong> across Oracle, PostgreSQL, SQL Server, Snowflake, and Databricks</li>
+                <li>Delivered 15+ large-scale enterprise migrations with <strong>98% automation rate</strong></li>
+            </ul>
+        </section>
+
+        <!-- AI Agents Section -->
+        <section id="agents">
+            <h2>AI-Powered Migration Agents (2025 - Present)</h2>
+            <p style="margin-bottom: 1.5rem;">Designed and deployed 6 production-grade autonomous agents integrated into QMigrator, revolutionizing database migration workflows across Fortune 500 engagements.</p>
+
+            <div class="agent-card">
+                <h4>Agent 1: Conversion Agent (Stage 1) — Autonomous Migration Error Resolution</h4>
+                <ul>
+                    <li>Automated <strong>80%</strong> of migration error corrections, reducing resolution time from <strong>2 hours to 8 minutes</strong></li>
+                    <li>Processed <strong>50,000+ migration errors</strong> across 8 enterprise clients with 95% success rate</li>
+                    <li>Integrated multi-provider LLM support (GPT-4, Claude, Gemini) with dynamic model selection</li>
+                    <li>Supports Oracle→PostgreSQL, SQL Server→PostgreSQL, Oracle→SQL Server, Snowflake→Databricks</li>
+                </ul>
+                <div class="stack">Stack: Python, LangChain, LangGraph, FastAPI, PostgreSQL, Oracle, Azure OpenAI</div>
+            </div>
+
+            <div class="agent-card">
+                <h4>Agent 2: Conversion Agent (Stage 2) — Module Enhancement Pipeline</h4>
+                <ul>
+                    <li>Improved QMigrator conversion accuracy by <strong>40%</strong> through root-cause module fixing</li>
+                    <li>Achieved <strong>90% performance gain</strong> via enhanced module registry and smart caching</li>
+                    <li>Eliminated 60% of recurring conversion failures through systematic module updates</li>
+                </ul>
+                <div class="stack">Stack: Python, LangGraph, FastAPI, Dynamic Module Loading, Excel Processing</div>
+            </div>
+
+            <div class="agent-card">
+                <h4>Agent 3: Debug Mode Agent — Human-in-the-Loop Iterative Debugging</h4>
+                <ul>
+                    <li>Reduced complex error resolution time by <strong>65%</strong> through intelligent snippet isolation</li>
+                    <li>Achieved <strong>95% approval rate</strong> for AI-suggested fixes with human validation</li>
+                    <li>Processed 10,000+ debugging sessions with complete audit trails</li>
+                </ul>
+                <div class="stack">Stack: Python, LangGraph, FastAPI, Threading, PostgreSQL</div>
+            </div>
+
+            <div class="agent-card">
+                <h4>Agent 4: DBA Agent — AI-Powered Database Health and Analysis</h4>
+                <ul>
+                    <li>Automated <strong>70%</strong> of routine DBA queries, reducing manual database inspection time</li>
+                    <li>Processed 25,000+ database queries with 90% accuracy via natural language interface</li>
+                    <li>Supports PostgreSQL, Oracle, SQL Server, and MySQL with real-time query execution</li>
+                </ul>
+                <div class="stack">Stack: Python, LangChain, LangGraph, FastAPI, psycopg2, cx_Oracle, SQLAlchemy</div>
+            </div>
+
+            <div class="agent-card">
+                <h4>Agent 5: Performance Agent — SQL Optimization and Tuning</h4>
+                <ul>
+                    <li>Optimized <strong>15,000+ SQL queries</strong> with an average 60% performance improvement</li>
+                    <li>Achieved 90% cache hit rate, reducing query response time from minutes to milliseconds</li>
+                    <li>Includes execution plan analysis, index recommendations, and intelligent query rewriting</li>
+                </ul>
+                <div class="stack">Stack: Python, LangGraph, FastAPI, PostgreSQL, Query Plan Analysis, SQLAlchemy</div>
+            </div>
+
+            <div class="agent-card">
+                <h4>Agent 6: Dev Conversion Agent — Development and Testing Workflow</h4>
+                <ul>
+                    <li>Accelerated development cycles by <strong>50%</strong> through visual workflow monitoring</li>
+                    <li>Reduced debugging time by 40% via interactive state inspection</li>
+                    <li>Built real-time visualization UI with parameter tuning and export functionality</li>
+                </ul>
+                <div class="stack">Stack: Python, Streamlit, LangGraph, FastAPI, Pandas</div>
+            </div>
+        </section>
+
+        <!-- Client Projects Section -->
+        <section id="projects">
+            <h2>Client Deployments</h2>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">NIKE — Cloud Data Platform Modernization</div>
+                    <div class="project-period">2026 - Present</div>
+                </div>
+                <div class="project-subtitle">Snowflake to Databricks Migration</div>
+                <ul>
+                    <li>Leading large-scale data platform migration for enterprise analytics on Databricks</li>
+                    <li>Designed ETL pipeline transformations achieving <strong>98% data migration accuracy</strong></li>
+                    <li>Optimized query performance with <strong>40% faster execution</strong> times on Databricks</li>
+                    <li>Deployed on AWS infrastructure with Delta Lake architecture</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">eBAY — Enterprise Database Migration</div>
+                    <div class="project-period">2023 - Present</div>
+                </div>
+                <div class="project-subtitle">Oracle to PostgreSQL Migration</div>
+                <ul>
+                    <li>Deployed Stage 1 and Stage 2 conversion agents for automated error correction pipeline</li>
+                    <li>Implemented Performance Agent for query optimization during migration</li>
+                    <li>Achieved <strong>98% automation</strong> in schema conversion with AI-driven validation</li>
+                    <li>Deployed on AWS using ECS with Fargate, ECR, and API Gateway</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">ELEVANCE HEALTH (Formerly Anthem)</div>
+                    <div class="project-period">2024 - 2025</div>
+                </div>
+                <div class="project-subtitle">SQL Server to Azure PostgreSQL | 75,000+ Objects</div>
+                <ul>
+                    <li>Orchestrated AI agent workflows for complex PL/SQL to PL/pgSQL conversions</li>
+                    <li>Implemented Debug Mode for human-in-the-loop validation of critical business logic</li>
+                    <li>Achieved <strong>95% conversion accuracy</strong> for stored procedures and functions</li>
+                    <li>Reduced manual intervention by 80% through intelligent agent automation</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">UHG (United Health Group)</div>
+                    <div class="project-period">2023 - 2025</div>
+                </div>
+                <div class="project-subtitle">Oracle to PostgreSQL | 50,000+ Objects, 2TB+ Data</div>
+                <ul>
+                    <li>Deployed all 6 AI agents to production serving <strong>100+ concurrent users</strong></li>
+                    <li>Achieved 98% schema conversion automation with AI-driven error correction</li>
+                    <li>Implemented Kubernetes-based architecture for horizontal scaling</li>
+                    <li>Reduced migration timeline by <strong>60%</strong> compared to traditional approaches</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">APOLLO HOSPITALS</div>
+                    <div class="project-period">2022 - 2024</div>
+                </div>
+                <div class="project-subtitle">On-Premise Oracle to Azure PostgreSQL — Healthcare System Migration</div>
+                <ul>
+                    <li>Managed weekly release cycles with comprehensive deployment validations</li>
+                    <li>Coordinated cross-functional teams (DBA, Application, Infrastructure)</li>
+                    <li>Ensured <strong>100% compliance</strong> with healthcare data security standards (HIPAA)</li>
+                    <li>Achieved <strong>zero data loss</strong> during mission-critical healthcare system migration</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="project-card">
+                <h4>Master of Technology (M.Tech) in Computer Science and Engineering</h4>
+                <p>KITS Engineering College, JNTU Kakinada — Kakinada, Andhra Pradesh</p>
+            </div>
+
+            <div class="project-card">
+                <h4>Bachelor of Technology (B.Tech) in Computer Science and Engineering</h4>
+                <p>Chalapathi Engineering College, JNTU Kakinada — Guntur, Andhra Pradesh</p>
+            </div>
+
+            <div class="project-card">
+                <h4>Diploma in Electrical and Electronics Engineering</h4>
+                <p>Al-Huda Polytechnic College, AICTE — Nellore, Andhra Pradesh</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Advanced LangChain and LangGraph Patterns for Production Systems</li>
+                <li>Azure Solutions Architect — Cloud Infrastructure and DevOps</li>
+                <li>Kubernetes Application Development and Container Orchestration</li>
+                <li>Database Performance Tuning and Query Optimization</li>
+                <li>Agile and Scrum Methodologies — Sprint Planning and Team Leadership</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 M. Siva Naga Raju. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Built with passion for AI and database technologies</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">▲</div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
