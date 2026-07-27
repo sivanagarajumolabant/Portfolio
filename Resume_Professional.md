@@ -2,9 +2,9 @@
 
 **Senior Technical Analyst | AI Solutions Architect | Agentic Migration Platform Specialist**
 
-Email: siva.m504504@gmail.com | Phone: +91-8985111673 | Location: Hyderabad, India  
-LinkedIn: linkedin.com/in/siva-nagaraju-molabanti-b9883a185  
-Portfolio: https://sivanagarajumolabant.github.io/Portfolio/
+Email: [siva.m504504@gmail.com](mailto:siva.m504504@gmail.com) | Phone: +91-8985111673 | Location: Hyderabad, India  
+LinkedIn: [linkedin.com/in/siva-nagaraju-molabanti-b9883a185](https://linkedin.com/in/siva-nagaraju-molabanti-b9883a185)  
+Portfolio: [sivanagarajumolabant.github.io/Portfolio](https://sivanagarajumolabant.github.io/Portfolio/)
 
 ---
 
@@ -13,7 +13,7 @@ Portfolio: https://sivanagarajumolabant.github.io/Portfolio/
 Senior Technical Analyst with **7+ years of experience** at Quadrant Technologies, specializing in enterprise-grade AI-powered database migration and release automation for the QMigrator product. Integrated and productionized a multi-agent migration ecosystem across Release Agent, Migration Agent, API Agent, UI Agent, DB Agent, DevOps Agent, Testing Automation, and execution triage/remediation flows, using LangGraph, FastAPI, Azure DevOps, and Google's A2A/ADK-style agent-to-agent SDK patterns.
 
 - Integrated independently developed agent services into a unified QMigrator release workflow with A2A communication, status tracking, DevOps automation, and test feedback loops
-- Achieved 98% automation in database schema conversion across Oracle, PostgreSQL, SQL Server, Snowflake, Databricks, Sybase, and SQL Server modernization paths
+- Achieved 98% automation in database schema conversion across Oracle, PostgreSQL, SQL Server, Snowflake, Databricks, and Sybase-to-SQL Server modernization paths
 - Reduced migration error resolution time by 75% — from 2 hours to 8 minutes — through AI triage, remediation, validation, and rerun loops
 - Delivered enterprise migration automation for UHG, Elevance Health/Carelon, eBay, Nike, and Apollo Hospitals
 
@@ -52,7 +52,7 @@ Senior Technical Analyst with **7+ years of experience** at Quadrant Technologie
 
 ### Product: QMigrator — Enterprise Database Migration Platform
 **Core Product Developer and AI Solutions Architect** | 2019 - Present  
-Platform URL: https://qcam.qmigrator.ai/
+Platform URL: [qcam.qmigrator.ai](https://qcam.qmigrator.ai/)
 
 QMigrator is Quadrant Technologies' flagship enterprise database migration platform that automates end-to-end schema conversion, data migration, and code translation across heterogeneous database environments. Key contributor since inception — built and evolved the platform from a feature management system to a full-scale AI-powered migration solution.
 
@@ -90,6 +90,23 @@ Integrated and productionized a multi-agent QMigrator automation platform. Sever
 - Added pipeline build status polling with simple status outputs: running, success, failed
 - Integrated Testing Automation after DevOps build success, including external trigger/status APIs, 60-second polling, E2E result interpretation, AI triage/remediation, redeploy, and retry loops
 - Stack: Azure DevOps, ArgoCD, Kubernetes, Docker, Terraform workflows, Playwright/E2E automation APIs, FastAPI
+
+**Conversion Agent Stage 1 and Stage 2 — Migration Error Resolution and Module Enhancement**
+- Built and integrated Conversion Agent Stage 1 for automated migration error correction, SQL/code fix suggestions, and migration issue resolution workflows
+- Built and integrated Conversion Agent Stage 2 for root-cause module fixes, reusable conversion module updates, and recurring conversion error reduction
+- Stack: Python, FastAPI, LangChain, LangGraph, Azure OpenAI/Anthropic/Gemini/Ollama, migration validators, Excel/CSV processing
+
+**Debug Mode, DBA, and Performance Agents — Expert Migration Assistants**
+- Built Debug Mode Agent for human-in-the-loop debugging with snippet isolation, iterative fix validation, and audit-friendly review cycles
+- Built DBA Agent for natural-language database analysis and DBA support across PostgreSQL, Oracle, SQL Server, and related migration environments
+- Built Performance Agent for SQL query tuning, execution-plan analysis, index recommendations, and query optimization support
+- Stack: Python, FastAPI, LangChain, SQLAlchemy, PostgreSQL, Oracle, SQL Server
+
+**Dev Conversion, Connector, and Test Coverage Agents — Workflow Automation**
+- Built Dev Conversion Agent for development/testing workflow support with run tracking, debugging assistance, and migration conversion validation
+- Built Connector Agent for connector automation and migration integration support
+- Built Test Coverage Agent for automated coverage assistance and validation support
+- Stack: Python, FastAPI, Streamlit, LangChain/LangGraph, multimodel LLM integrations
 
 #### QMigrator Development: Multi-LLM Infrastructure | 2025 - Present
 
