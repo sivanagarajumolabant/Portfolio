@@ -1,6 +1,6 @@
 # M. SIVA NAGA RAJU
 
-**Senior Technical Analyst | AI Solutions Architect | Migration Specialist**
+**Senior Technical Analyst | AI Solutions Architect | Agentic Migration Platform Specialist**
 
 Email: siva.m504504@gmail.com | Phone: +91-8985111673 | Location: Hyderabad, India  
 LinkedIn: linkedin.com/in/siva-nagaraju-molabanti-b9883a185  
@@ -10,34 +10,35 @@ Portfolio: https://sivanagarajumolabant.github.io/Portfolio/
 
 ## SUMMARY
 
-Senior Technical Analyst with **7+ years of experience** at Quadrant Technologies, specializing in enterprise-grade AI-powered database migration solutions for the QMigrator product. Architect of 6 production-grade autonomous agents built on LangGraph and LangChain, deployed across Fortune 500 clients including UHG, Elevance Health, eBay, Nike, and Apollo Hospitals.
+Senior Technical Analyst with **7+ years of experience** at Quadrant Technologies, specializing in enterprise-grade AI-powered database migration and release automation for the QMigrator product. Integrated and productionized a multi-agent migration ecosystem across Release Agent, Migration Agent, API Agent, UI Agent, DB Agent, DevOps Agent, Testing Automation, and execution triage/remediation flows, using LangGraph, FastAPI, Azure DevOps, and Google's A2A/ADK-style agent-to-agent SDK patterns.
 
-- Achieved 98% automation in database schema conversion across Oracle, PostgreSQL, SQL Server, Snowflake, and Databricks
-- Delivered 95% AI-driven error correction accuracy with minimal human intervention
-- Reduced migration error resolution time by 75% — from 2 hours to 8 minutes
-- Drove $2M+ cost savings for enterprise clients through end-to-end automation
+- Integrated independently developed agent services into a unified QMigrator release workflow with A2A communication, status tracking, DevOps automation, and test feedback loops
+- Achieved 98% automation in database schema conversion across Oracle, PostgreSQL, SQL Server, Snowflake, Databricks, Sybase, and SQL Server modernization paths
+- Reduced migration error resolution time by 75% — from 2 hours to 8 minutes — through AI triage, remediation, validation, and rerun loops
+- Delivered enterprise migration automation for UHG, Elevance Health/Carelon, eBay, Nike, and Apollo Hospitals
 
 ---
 
 ## SKILLS
 
-**AI & Generative AI:** LangChain, LangGraph, Multi-Agent Systems, RAG Architecture, Prompt Engineering, Pydantic AI, Agentic AI, NLP, Conversational AI  
+**AI & Generative AI:** LangChain, LangGraph, Multi-Agent Systems, Google A2A/ADK-style Agent SDK Integration, RAG Architecture, Prompt Engineering, Agentic AI, Pydantic AI, NLP  
+**Agent Orchestration:** FastAPI Agent Services, A2A JSON-RPC, Agent Cards, Webhook Signals, LangGraph Checkpointing, Human-in-the-Loop Review, Multi-Agent Release DAGs  
 **Large Language Models:** Azure OpenAI GPT-4, Anthropic Claude, Google Gemini, Groq, Ollama  
 **Vector Databases:** ChromaDB, FAISS, Pinecone, Milvus, Qdrant  
 **AI Evaluation:** DeepEval, Ragas, AI Guardrails, AI Safety, Quality Assurance  
 **Embeddings:** OpenAI Embeddings, HuggingFace Embeddings, Ollama Embeddings  
 **Programming Languages:** Python (Expert), SQL (Advanced), JavaScript  
 **Backend Frameworks:** FastAPI, Django, Django REST Framework, Flask, Streamlit  
-**API Development:** RESTful APIs, GraphQL, Swagger, OpenAPI  
+**API Development:** RESTful APIs, A2A Protocol APIs, JSON-RPC, GraphQL, Swagger, OpenAPI  
 **Data Engineering:** Pandas, NumPy, Apache Airflow, Celery, ETL Pipelines, Matplotlib, Seaborn  
 **Databases:** PostgreSQL, Oracle, SQL Server, MySQL, MongoDB, Redis  
 **Data Platforms:** Snowflake, Databricks, Delta Lake  
 **Database Skills:** Query Optimization, Performance Tuning, PL/SQL, PL/pgSQL, T-SQL, Index Design  
-**Cloud - Azure:** AKS, ACR, Azure DevOps, Key Vault, Pipelines, Azure PostgreSQL  
+**Cloud - Azure:** AKS, ACR, Azure DevOps, Key Vault, Pipelines, Azure PostgreSQL, Azure Blob Storage  
 **Cloud - AWS:** ECS, Fargate, ECR, API Gateway, Lambda, S3, EC2, RDS  
-**DevOps & Containers:** Docker, Kubernetes, Helm Charts, GitHub Actions, GitLab CI/CD  
-**Frontend:** ReactJS, JavaScript, HTML5, CSS3, Material UI  
-**Testing:** Pytest, Playwright, Selenium  
+**DevOps & Containers:** Docker, Kubernetes, Helm Charts, ArgoCD, Azure Pipelines, GitHub Actions, GitLab CI/CD  
+**Frontend:** Angular 17, ReactJS, JavaScript, TypeScript, HTML5, CSS3, Material UI  
+**Testing:** Playwright Automation, Pytest, Selenium, E2E Status Polling, Automated Remediation Loops  
 **Tools:** Git, GitHub, GitLab, Bitbucket, JIRA, Confluence, Postman, VS Code, PyCharm, Cursor, Windsurf
 
 ---
@@ -62,52 +63,40 @@ QMigrator is Quadrant Technologies' flagship enterprise database migration platf
 
 ---
 
-#### QMigrator Development: AI Agents Module | 2025 - Present
+#### QMigrator Development: Agentic Release and Migration Automation Platform | 2025 - Present
 
-Designed and deployed 6 production-grade autonomous agents integrated into QMigrator, revolutionizing database migration workflows across Fortune 500 engagements.
+Integrated and productionized a multi-agent QMigrator automation platform. Several component agents were developed by different contributors/teams; my role focused on end-to-end integration, orchestration, request/status lifecycle, A2A communication, DevOps hand-off, testing automation, and production readiness.
 
-**Agent 1: Conversion Agent (Stage 1) — Autonomous Migration Error Resolution**
-- Automated 80% of migration error corrections, reducing resolution time from 2 hours to 8 minutes
-- Processed 50,000+ migration errors across 8 enterprise clients with 95% success rate
-- Integrated multi-provider LLM support (GPT-4, Claude, Gemini) with dynamic model selection and fallback
-- Supports Oracle-to-PostgreSQL, SQL Server-to-PostgreSQL, Oracle-to-SQL Server, Snowflake-to-Databricks
-- Stack: Python, LangChain, LangGraph, FastAPI, PostgreSQL, Oracle, Azure OpenAI
+**Release Agent — Multi-Agent Orchestration and Status Control**
+- Integrated Release Agent as the central controller for migration releases, using a configurable agent DAG to run Assessment, Conversion, Data Migration, Testing Workload, API, UI, DB, and DevOps components
+- Implemented Google A2A/ADK-style agent-to-agent integration using Agent Cards, JSON-RPC message/send, task polling, webhook signals, and shared job correlation
+- Added release request persistence, component-level status tracking, checkpointer-backed recovery, DevOps build status polling, and QCam UI progress updates
+- Stack: Python, FastAPI, LangGraph, PostgreSQL checkpointing, Google A2A SDK patterns, Azure DevOps, YAML configuration
 
-**Agent 2: Conversion Agent (Stage 2) — Module Enhancement Pipeline**
-- Improved QMigrator conversion accuracy by 40% through root-cause module fixing
-- Achieved 90% performance gain via enhanced module registry and smart caching
-- Eliminated 60% of recurring conversion failures through systematic module updates
-- Stack: Python, LangGraph, FastAPI, Dynamic Module Loading, Excel Processing
+**Migration Agent — AI Migration Path Generation Engine**
+- Integrated Assessment, Conversion, Data Migration, and Testing Workload agents as standalone LangGraph workflows exposed through REST and A2A server endpoints
+- Supported migration path generation, reference selection, template adaptation, validation/fix loops, PR creation, artifact publishing, and upstream hand-off between agents
+- Extended the platform to allow common dispatcher/main file updates when required while preserving existing function signatures
+- Stack: Python, FastAPI, LangGraph, LangChain-style tool loops, Azure OpenAI/Claude/Gemini/Ollama, Azure Blob, Azure DevOps PR APIs
 
-**Agent 3: Debug Mode Agent — Human-in-the-Loop Iterative Debugging**
-- Reduced complex error resolution time by 65% through intelligent snippet isolation
-- Achieved 95% approval rate for AI-suggested fixes with human validation
-- Processed 10,000+ debugging sessions with complete audit trails and real-time feedback
-- Stack: Python, LangGraph, FastAPI, Threading, PostgreSQL
+**API/UI/DB Agent Integration — Product Surface Automation**
+- Integrated API Agent for QMigrator backend assessment controller scaffolding, .NET operation libraries, route constants, DI registration, and database-specific operations
+- Integrated UI Agent for Angular 17 migration-type wiring across constants, services, enums, connection screens, schema extraction, E2E migration, and configuration flows
+- Integrated DB Agent for database repository branch and pull-request automation as part of the release component flow
+- Stack: FastAPI, Angular 17, .NET/QMigrator API conventions, Azure DevOps, Git automation
 
-**Agent 4: DBA Agent — AI-Powered Database Health and Analysis**
-- Automated 70% of routine DBA queries, reducing manual database inspection time
-- Processed 25,000+ database queries with 90% accuracy via natural language interface
-- Supports PostgreSQL, Oracle, SQL Server, and MySQL with real-time query execution
-- Stack: Python, LangChain, LangGraph, FastAPI, psycopg2, cx_Oracle, SQLAlchemy
-
-**Agent 5: Performance Agent — SQL Optimization and Tuning**
-- Optimized 15,000+ SQL queries with an average 60% performance improvement
-- Achieved 90% cache hit rate, reducing query response time from minutes to milliseconds
-- Includes execution plan analysis, index recommendations, and intelligent query rewriting
-- Stack: Python, LangGraph, FastAPI, PostgreSQL, Query Plan Analysis, SQLAlchemy
-
-**Agent 6: Dev Conversion Agent — Development and Testing Workflow**
-- Accelerated development cycles by 50% through visual workflow monitoring
-- Reduced debugging time by 40% via interactive state inspection and step-by-step execution
-- Built real-time visualization UI with parameter tuning and export functionality
-- Stack: Python, Streamlit, LangGraph, FastAPI, Pandas
+**DevOps Agent and Testing Automation — Deployment Validation Loop**
+- Integrated DevOps Agent for Azure DevOps pipeline triggering, ArgoCD bootstrap, Azure project bootstrap, SaaS infra/Terraform setup, release summaries, and build remediation support
+- Added pipeline build status polling with simple status outputs: running, success, failed
+- Integrated Testing Automation after DevOps build success, including external trigger/status APIs, 60-second polling, E2E result interpretation, AI triage/remediation, redeploy, and retry loops
+- Stack: Azure DevOps, ArgoCD, Kubernetes, Docker, Terraform workflows, Playwright/E2E automation APIs, FastAPI
 
 #### QMigrator Development: Multi-LLM Infrastructure | 2025 - Present
 
 - Architected enterprise-grade LLM abstraction layer supporting Azure OpenAI, Anthropic Claude, Groq, Google Gemini, and Ollama
 - Built dynamic model switching with cost optimization, fallback mechanisms, and token usage tracking
 - Integrated AI guardrails and evaluation frameworks (DeepEval, Ragas) for quality assurance and safety
+- Standardized agent communication surfaces with A2A/ADK-style contracts so independently built agents could be discovered, invoked, tracked, and chained consistently
 - Stack: Python, LangChain, DeepEval, Ragas, JSON/YAML Configuration
 
 #### QMigrator Development: Core Migration Engine | 2021 - 2022
@@ -132,6 +121,14 @@ Designed and deployed 6 production-grade autonomous agents integrated into QMigr
 
 ### QMigrator Client Deployments
 
+#### Project: CARELON HEALTH / ELEVANCE HEALTH — Sybase to SQL Server Migration
+**Ongoing Migration Automation Support** | 2026 - Present
+
+- Supporting ongoing Sybase to SQL Server migration work under the Carelon Health / Elevance Health account
+- Applying the integrated QMigrator agent ecosystem for migration-path generation, API/UI/DB integration, DevOps orchestration, and Testing Automation validation
+- Coordinating release flow across Migration Agent, Release Agent, DevOps Agent, QCam UI, and execution triage/remediation components
+- Focused on reducing manual release coordination by standardizing request tracking, pipeline status, E2E testing feedback, and remediation loops
+
 #### Project: NIKE — Cloud Data Platform Modernization
 **Snowflake to Databricks Migration** | 2026 - Present
 
@@ -141,7 +138,7 @@ Designed and deployed 6 production-grade autonomous agents integrated into QMigr
 - Deployed on AWS infrastructure with Delta Lake architecture for data lakehouse implementation
 
 #### Project: eBAY — Enterprise Database Migration
-**Oracle to PostgreSQL Migration** | 2023 - Present
+**Oracle to PostgreSQL Migration** | 2024 - 2026
 
 - Deployed Stage 1 and Stage 2 conversion agents for automated error correction pipeline
 - Implemented Performance Agent for query optimization during migration
